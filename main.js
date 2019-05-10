@@ -4,8 +4,11 @@ import bot from './bot'
 let launch = () => {
   
     bot.launchHandlers();
-    // bot.initNotifications();
     bot.launchBot();
+
+    setInterval(async () => {
+        await bot.Notifications();
+    }, 60000);
     
 };
 
